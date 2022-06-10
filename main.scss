@@ -1,0 +1,912 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+// Color
+$primaryColor: #161518;
+$secondaryColor: #373639;
+$tertiaryColor: #c0c0c0;
+$listColor: #4de1f5;
+$textColor: #f7f7f7;
+
+// General
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// body
+body {
+  min-height: 3000px;
+
+  &:not(nav, .custom-hero) {
+    background-color: $primaryColor;
+  }
+}
+
+// Navbar
+nav {
+  transition: 0.4s ease;
+  font-family: lora;
+
+  .navbar-brand {
+    color: $primaryColor;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+
+  .arch-logo {
+    color: $primaryColor;
+    font-weight: 600;
+    font-size: 1.7rem;
+    border-bottom: 1.6px solid $tertiaryColor;
+  }
+
+  #navbarNav {
+    @media screen and (max-width: 1000px) {
+      background-color: $textColor;
+      padding-bottom: 15px;
+      padding-right: 15px;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-weight: 500;
+          margin-left: 1em;
+          transition: 0.6s ease;
+          font-size: 1rem;
+          font-family: montserrat;
+          color: $primaryColor;
+
+          &:hover {
+            color: $tertiaryColor;
+          }
+        }
+
+        .nav-btn {
+          background-color: $primaryColor;
+          color: $textColor;
+          padding-right: 10px;
+          padding-left: 10px;
+          padding-top: 4px;
+          padding-bottom: 5px;
+          margin-top: 3px;
+          transition: 0.5s ease;
+          border: 0.5px solid $primaryColor;
+
+          &:hover {
+            background-color: transparent;
+            color: $primaryColor;
+            border: 0.5px solid $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hero
+.custom-hero {
+  background-image: url(aset/bg.jpg);
+  height: 100vh;
+  background-position: center;
+
+  .hero-content {
+    .row-hero {
+      @media screen and (max-width: 1000px) {
+        margin-top: 20px;
+      }
+
+      @media screen and (max-width: 900px) {
+        margin-top: 0px;
+      }
+
+      @media screen and (max-width: 500px) {
+        margin-top: 20px;
+      }
+
+      @media screen and (max-width: 370px) {
+        margin-top: 20px;
+      }
+
+      @media screen and (max-width: 350px) {
+        margin-top: 100px;
+      }
+
+      .hero-atas {
+        margin-top: 120px;
+
+        @media screen and (max-width: 1200px) {
+          margin-top: 100px;
+        }
+
+        @media screen and (max-width: 1200px) {
+          text-align: center;
+        }
+
+        @media screen and (max-width: 1000px) {
+          margin-top: 60px;
+        }
+
+        @media screen and (max-width: 500px) {
+          margin-top: 110px;
+        }
+
+        @media screen and (max-width: 370px) {
+          margin-top: 100px;
+        }
+
+        @media screen and (max-width: 350px) {
+          margin-top: 10px;
+        }
+
+        .txt-hero {
+          h2 {
+            font-family: montserrat;
+            font-size: 2.8rem;
+            color: $primaryColor;
+
+            .tagline-txt {
+              border-bottom: 1.6px solid $tertiaryColor;
+            }
+
+            @media screen and (max-width: 1400px) {
+              font-size: 2.2rem;
+            }
+
+            @media screen and (max-width: 1200px) {
+              font-size: 2rem;
+            }
+
+            @media screen and (max-width: 1000px) {
+              font-size: 2.5rem;
+            }
+
+            @media screen and (max-width: 580px) {
+              font-size: 1.5rem;
+            }
+
+            @media screen and (max-width: 440px) {
+              font-size: 1.4rem;
+            }
+
+            @media screen and (max-width: 350px) {
+              font-size: 1.2rem;
+            }
+          }
+
+          p {
+            font-family: lora;
+            font-size: 1.1rem;
+            margin-top: 1.4rem;
+            margin-bottom: 4rem;
+
+            @media screen and (max-width: 1400px) {
+              font-size: 1rem;
+            }
+
+            @media screen and (max-width: 1200px) {
+              font-size: 0.9rem;
+              margin-bottom: 3rem;
+            }
+
+            @media screen and (max-width: 1000px) {
+              font-size: 1rem;
+              margin-bottom: 3rem;
+            }
+
+            @media screen and (max-width: 580px) {
+              font-size: 0.8rem;
+              margin-bottom: 2rem;
+            }
+
+            @media screen and (max-width: 350px) {
+              font-size: 0.7rem;
+              margin-bottom: 1.5rem;
+            }
+          }
+
+          .book-btn {
+            text-decoration: none;
+            background-color: $primaryColor;
+            color: $textColor;
+            padding-right: 14px;
+            padding-left: 14px;
+            padding-top: 5px;
+            padding-bottom: 7px;
+            font-family: montserrat;
+            border: 0.5px solid $primaryColor;
+            transition: 0.5s ease;
+            font-size: 1.1rem;
+
+            &:hover {
+              background-color: transparent;
+              color: $primaryColor;
+            }
+
+            @media screen and (max-width: 1200px) {
+              font-size: 0.9rem;
+            }
+
+            @media screen and (max-width: 350px) {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+
+      .hero-bawah {
+        img {
+          @media screen and (max-width: 1400px) {
+            height: 450px;
+            width: 550px;
+          }
+
+          @media screen and (max-width: 1200px) {
+            height: 360px;
+            width: 460px;
+          }
+
+          @media screen and (max-width: 990px) {
+            height: 400px;
+            width: 620px;
+            margin-top: 60px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          @media screen and (max-width: 768px) {
+            height: 400px;
+            width: 530px;
+            margin-top: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          @media screen and (max-width: 580px) {
+            height: 350px;
+            width: 470px;
+            margin-top: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          @media screen and (max-width: 540px) {
+            height: 280px;
+            width: 390px;
+            margin-top: 40px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          @media screen and (max-width: 430px) {
+            height: 300px;
+            width: 310px;
+            margin-top: 60px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          @media screen and (max-width: 350px) {
+            height: 170px;
+            width: 260px;
+            margin-top: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// About
+#about {
+  // background-color: $primaryColor;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .custom-about {
+    h2 {
+      color: $textColor;
+      font-family: montserrat;
+      font-weight: 500;
+
+      .dream-logo {
+        font-family: lora;
+        font-weight: 600;
+
+        .arch-logo {
+          border-bottom: 1px solid $tertiaryColor;
+        }
+      }
+    }
+
+    p {
+      color: $textColor;
+      font-family: lora;
+      font-size: 1.1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 1rem;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 0.9rem;
+      }
+
+      @media screen and (max-width: 1000px) {
+        font-size: 1rem;
+      }
+
+      @media screen and (max-width: 580px) {
+        font-size: 0.8rem;
+      }
+
+      @media screen and (max-width: 350px) {
+        font-size: 0.7rem;
+      }
+    }
+
+    .img-about {
+      .img-1 {
+        width: 420px;
+        height: 470px;
+        background-image: url(aset/pierre-chatel-innocenti-AlSlE8IAjZo-unsplash.jpg);
+        background-size: 100%;
+        background-position: center;
+        transition: 1.7s ease;
+
+        &:hover {
+          background-size: 120%;
+          background-position: center;
+        }
+      }
+
+      .img-2 {
+        width: 400px;
+        height: 470px;
+        background-image: url(aset/pierre-chatel-innocenti-gPvqQOAOXCw-unsplash.jpg);
+        background-size: 100%;
+        background-position: center;
+        transition: 1.7s ease;
+
+        &:hover {
+          background-size: 120%;
+          background-position: center;
+        }
+      }
+
+      .img-3 {
+        width: 400px;
+        height: 470px;
+        background-image: url(aset/pierre-chatel-innocenti-lQhtkVIiWiE-unsplash.jpg);
+        background-size: 100%;
+        background-position: center;
+        transition: 1.9s ease;
+
+        &:hover {
+          background-size: 120%;
+          background-position: center;
+        }
+      }
+
+      .img-abt {
+        @media screen and (max-width: 1400px) {
+          width: 360px;
+          height: 400px;
+        }
+
+        @media screen and (max-width: 1200px) {
+          width: 300px;
+          height: 340px;
+        }
+
+        @media screen and (max-width: 992px) {
+          width: 440px;
+          height: 420px;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 340px;
+          height: 360px;
+        }
+
+        @media screen and (max-width: 400px) {
+          width: 300px;
+          height: 320px;
+        }
+      }
+    }
+  }
+}
+
+// Number Data
+#number {
+  // background-color: $primaryColor;
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  .custom-number {
+    .number-data {
+      .card {
+        width: 22rem;
+        background-color: transparent;
+
+        @media screen and (max-width: 1200px) {
+          width: 18rem;
+        }
+
+        @media screen and (max-width: 1000px) {
+          width: 13rem;
+        }
+
+        @media screen and (max-width: 767px) {
+          width: 22rem;
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 20rem;
+        }
+
+        @media screen and (max-width: 350px) {
+          width: 18rem;
+        }
+
+        .card-body {
+          h5 {
+            font-size: 4.5rem;
+            color: $textColor;
+            font-family: montserrat;
+            font-weight: 600;
+
+            @media screen and (max-width: 600px) {
+              font-size: 3.8rem;
+            }
+
+            @media screen and (max-width: 420px) {
+              font-size: 3.2rem;
+            }
+          }
+
+          h6 {
+            font-size: 1.4rem;
+            color: $textColor;
+            font-family: montserrat;
+            margin-top: 10px;
+            font-weight: 300;
+
+            @media screen and (max-width: 430px) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Services
+#services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .custom-services {
+    .services-txt {
+      text-align: center;
+      color: $textColor;
+      font-family: montserrat;
+      margin-bottom: 18px;
+
+      h2 {
+        font-weight: 500;
+      }
+    }
+
+    .svc-row {
+      .card {
+        background-color: $textColor;
+        padding: 20px;
+        border-radius: 10px;
+
+        @media screen and (max-width: 500px) {
+          width: 20rem;
+          margin: auto;
+          margin-bottom: 20px;
+        }
+
+        h5 {
+          text-align: center;
+        }
+
+        img {
+          width: 160px;
+          margin: auto;
+          padding-top: 40px;
+          padding-bottom: 40px;
+
+          @media screen and (max-width: 500px) {
+            width: 130px;
+          }
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Project
+#project {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .custom-project {
+    .project-txt {
+      text-align: center;
+      color: $textColor;
+      font-family: montserrat;
+      margin-bottom: 20px;
+
+      h2 {
+        font-weight: 500;
+      }
+    }
+
+    .row-project {
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      @media screen and (max-width: 500px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .col-txt {
+        color: $textColor;
+        margin-top: 7.5rem;
+
+        @media screen and (max-width: 1200px) {
+          margin-top: 3.8rem;
+        }
+
+        @media screen and (max-width: 600px) {
+          text-align: center;
+          margin-top: 3.2rem;
+        }
+
+        @media screen and (max-width: 500px) {
+          margin-top: 2rem;
+        }
+
+        h2 {
+          @media screen and (max-width: 1400px) {
+            font-size: 1.8rem;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 1.6rem;
+          }
+
+          @media screen and (max-width: 540px) {
+            font-size: 1.4rem;
+          }
+        }
+
+        p {
+          margin-top: 1.6rem;
+          margin-bottom: 3.9rem;
+
+          @media screen and (max-width: 1400px) {
+            margin-bottom: 3.4rem;
+            font-size: 0.9rem;
+          }
+
+          @media screen and (max-width: 1200px) {
+            margin-bottom: 3rem;
+            font-size: 0.9rem;
+          }
+
+          @media screen and (max-width: 992px) {
+            margin-bottom: 3rem;
+          }
+
+          @media screen and (max-width: 540px) {
+            font-size: 0.8rem;
+            margin-bottom: 2rem;
+          }
+        }
+
+        a {
+          color: $textColor;
+          padding-bottom: 1px;
+          font-size: 1rem;
+          text-decoration: none;
+          border-bottom: 1px solid $textColor;
+          transition: 0.5s ease;
+
+          .fa {
+            margin-left: 5px;
+          }
+
+          &:hover {
+            color: $tertiaryColor;
+          }
+
+          @media screen and (max-width: 1400px) {
+            font-size: 0.9rem;
+          }
+
+          @media screen and (max-width: 500px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .col-img {
+        img {
+          width: 640px;
+          height: 400px;
+          margin: auto;
+          display: flex;
+          border-radius: 40px 0 40px 0;
+
+          @media screen and (max-width: 1400px) {
+            width: 530px;
+            height: 370px;
+          }
+
+          @media screen and (max-width: 1200px) {
+            width: 450px;
+            height: 340px;
+          }
+
+          @media screen and (max-width: 992px) {
+            width: 680px;
+            height: 380px;
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 510px;
+            height: 340px;
+          }
+
+          @media screen and (max-width: 540px) {
+            width: 440px;
+            height: 290px;
+          }
+
+          @media screen and (max-width: 462px) {
+            width: 380px;
+            height: 260px;
+          }
+
+          @media screen and (max-width: 400px) {
+            width: 330px;
+            height: 220px;
+          }
+
+          @media screen and (max-width: 360px) {
+            width: 300px;
+            height: 210px;
+          }
+        }
+
+        #mid-img {
+          border-radius: 0 40px 0 40px;
+
+          @media screen and (max-width: 992px) {
+            border-radius: 40px 0 40px 0;
+          }
+        }
+      }
+    }
+
+    #reverse {
+      @media screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+#app {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .custom-app {
+    .app-banner {
+      background-color: $textColor;
+      text-align: center;
+      padding: 20px;
+      padding-bottom: 20px;
+      border-radius: 10px;
+
+      @media screen and (max-width: 500px) {
+        width: 20rem;
+        margin: auto;
+      }
+
+      .app-txt {
+        padding: 5px;
+
+        @media screen and (max-width: 500px) {
+          font-size: 13px;
+        }
+
+        .dream-logo {
+          font-family: lora;
+          font-weight: 600;
+
+          .arch-logo {
+            border-bottom: 1px solid $tertiaryColor;
+          }
+        }
+      }
+
+      .app-img {
+        img {
+          width: 180px;
+
+          @media screen and (max-width: 992px) {
+            width: 170px;
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 150px;
+          }
+
+          @media screen and (max-width: 508px) {
+            width: 170px;
+            display: flex;
+            margin: auto;
+            margin-bottom: 10px;
+          }
+
+          @media screen and (max-width: 428px) {
+            width: 140px;
+            display: flex;
+            margin: auto;
+            margin-bottom: 10px;
+          }
+
+          @media screen and (max-width: 360px) {
+            width: 120px;
+            display: flex;
+            margin: auto;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer
+#footer {
+  padding-top: 40px;
+  padding-bottom: 10px;
+
+  .custom-footer {
+    color: $textColor;
+
+    .foot-row {
+      .footer-abt {
+        .foot-text {
+          h2 {
+            color: $textColor;
+            font-family: montserrat;
+            font-weight: 500;
+
+            .dream-logo {
+              font-family: lora;
+              font-weight: 600;
+
+              .arch-logo {
+                border-bottom: 1px solid $tertiaryColor;
+              }
+            }
+          }
+
+          .foot-social {
+            margin-top: 30px;
+
+            .fa {
+              font-size: 28px;
+              width: 45px;
+              height: 45px;
+              padding-top: 7px;
+              text-align: center;
+              transition: 0.5s ease;
+              color: $textColor;
+              border: 1px solid $textColor;
+              border-radius: 40px;
+              margin-right: 6px;
+
+              &:hover {
+                color: $primaryColor;
+                background-color: $textColor;
+              }
+
+              @media screen and (max-width: 481px) {
+                font-size: 1.2rem;
+                width: 35px;
+                height: 35px;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-links {
+        padding-left: 80px;
+        padding-top: 2px;
+
+        @media screen and (max-width: 1200px) {
+          padding-left: 20px;
+        }
+
+        @media screen and (max-width: 1000px) {
+          padding-left: 12px;
+          margin-top: 40px;
+        }
+
+        .right-row {
+          .links {
+            h4 {
+              color: $textColor;
+            }
+
+            ul {
+              margin-left: -30px;
+
+              li {
+                list-style: none;
+                line-height: 30px;
+
+                a {
+                  text-decoration: none;
+                  color: $textColor;
+                  transition: 0.5s ease;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+
+                  @media screen and (max-width: 481px) {
+                    font-size: 0.9rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    hr {
+      margin-top: 40px;
+    }
+
+    footer {
+      text-align: center;
+
+      h6 {
+        @media screen and (max-width: 481px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
